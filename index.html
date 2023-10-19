@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="assets/script.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
   <title>Commentaires</title>
 </head>
@@ -42,7 +43,12 @@
                   </div>
                 </div>
               </div>
-            
+              <div id="comments" class="flex-1 py-10 border-t border-gray-200">
+                <h3 id="nameTitle" class="font-medium text-gray-900"></h3>
+
+                <div id="comment-message" class="prose prose-sm mt-4 max-w-none text-gray-500">
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -66,7 +72,7 @@
         <!-- FORM  -->
         <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div>
-            <label for="first-name" class="block text-sm font-medium text-warm-gray-900">Prénom</label>
+            <label  for="first-name" class="block text-sm font-medium text-warm-gray-900">Prénom</label>
             <div class="mt-1">
               <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500">
             </div>
@@ -87,7 +93,7 @@
             </div>
           </div>
           <div class="sm:col-span-2 sm:flex sm:justify-end">
-            <button type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto">
+            <button id="button" type="button" onclick="clicked()" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto">
               Envoyer
             </button>
           </div>
